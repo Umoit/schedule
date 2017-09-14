@@ -17,8 +17,10 @@ Route::get('/', function () {
 
 //后台
 Route::group(['prefix' => 'admin'],function(){
-	Route::get('/','Admin\IndexController@index')->name('admin.dashboard');
-	Route::get('login','Admin\LoginController@getLogin')->name('admin.login');
-	Route::post('login','Admin\LoginController@postLogin');
-	Route::get('logout','Admin\LoginController@logout')->name('admin.logout');
+	Route::get('dashboard','Admin\IndexController@dashboard')->name('admin.dashboard');
+	Route::get('login','Admin\Auth\LoginController@getLogin')->name('admin.login');
+	Route::post('login','Admin\Auth\LoginController@postLogin')->name('admin.post.login');
+	Route::get('logout','Admin\Auth\LoginController@logout')->name('admin.logout');
 });
+
+Auth::routes();

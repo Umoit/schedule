@@ -1889,8 +1889,8 @@ body .fc {
 
 /*
 Acceptable font-family overrides for individual icons:
-  "Arial", sans-serif
-  "Times New Roman", serif
+	"Arial", sans-serif
+	"Times New Roman", serif
 
 NOTE: use percentage font sizes or else old IE chokes
 */
@@ -7488,7 +7488,7 @@ star {
   background-color: #FFFFFF;
   margin-bottom: 30px;
   /*
-      background-image: url('https://images.unsplash.com/photo-1438978280647-f359d95ebda4?q=80&fm=jpg&s=73cb1239b517411534379c92660b2660');
+      background-image: url(../../../../images.unsplash.com/photo-1438978280647-f359d95ebda4~q=80&fm=jpg&s=73cb1239b517411534379c92660b2660.jpg0');
       background-size: cover;
       z-index: 1;
 
