@@ -10,12 +10,13 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+//前端
+Route::get('/','Front\IndexController@index')->name('index');
 
-Route::get('/', function () {
-    return view('welcome');
-});
+	Route::get('testdb','Admin\IndexController@testdb');
 
-//后台
+
+//后端
 Route::group(['prefix' => 'admin'],function(){
 	Route::get('dashboard','Admin\IndexController@dashboard')->name('admin.dashboard');
 	Route::get('login','Admin\Auth\LoginController@getLogin')->name('admin.login');
