@@ -1589,3 +1589,36 @@
     -webkit-animation-name: Floatingx;
     -moz-animation-name: Floatingx;
 }
+/*11111111111*****/
+ .item-thum {
+    margin: 0 auto;
+    width: 64px;
+    height: 64px;
+    margin-right: 15px;
+}
+
+
+.item-body {
+    padding-right: 10px;
+}
+
+.item-body {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 0%;
+    -ms-flex: 1 1 0%;
+    flex: 1 1 0%;
+}
+.item-heading{
+    margin-bottom: 5px;
+}
+.tag-list{
+    margin-bottom: 5px;
+    padding-left: 0px;
+}
+.tag-list li{
+    display: inline-block;
+    list-style: none;
+}
+.item-footer a{
+    padding-right: 5px;
+}

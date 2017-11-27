@@ -7,31 +7,51 @@
         -->
 
         <div class="logo">
-            <a href="http://www.creative-tim.com/" class="logo-text">
+            <a href="http://www.creative-tim.com/" class="simple-text logo-mini">
+                Ct
+            </a>
+
+            <a href="http://www.creative-tim.com/" class="simple-text logo-normal">
                 Creative Tim
             </a>
         </div>
-		<div class="logo logo-mini">
-			<a href="http://www.creative-tim.com/" class="logo-text">
-				Ct
-			</a>
-		</div>
 
-    	<div class="sidebar-wrapper">
+        <div class="sidebar-wrapper">
             <div class="user">
-                <div class="photo">
-                    <img src="../assets/img/default-avatar.png" />
-                </div>
                 <div class="info">
+                    <div class="photo">
+                        <img src="../assets/img/default-avatar.png" />
+                    </div>
+
                     <a data-toggle="collapse" href="#collapseExample" class="collapsed">
-                        Tania Andrew
-                        <b class="caret"></b>
+                        <span>
+                            {{Auth::user()->name}}
+                            <b class="caret"></b>
+                        </span>
                     </a>
+
                     <div class="collapse" id="collapseExample">
                         <ul class="nav">
-                            <li><a href="#">My Profile</a></li>
-                            <li><a href="#">Edit Profile</a></li>
-                            <li><a href="#">Settings</a></li>
+                            <li>
+                                <a href="#pablo">
+                                    <span class="sidebar-mini">MP</span>
+                                    <span class="sidebar-normal">My Profile</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#pablo">
+                                    <span class="sidebar-mini">EP</span>
+                                    <span class="sidebar-normal">设置</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#pablo">
+                                    <span class="sidebar-mini">S</span>
+                                    <span class="sidebar-normal">登出</span>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -39,31 +59,65 @@
 
             <ul class="nav">
                 <li class="active">
-                    <a href="dashboard.html">
-                        <i class="pe-7s-graph"></i>
-                        <p>Dashboard</p>
+                    <a href="{{route('admin.dashboard')}}">
+                        <i class="fa fa-dashboard"></i>
+                        <p>主面板</p>
                     </a>
                 </li>
                 <li>
-                    <a data-toggle="collapse" href="#componentsExamples">
-                        <i class="pe-7s-plugin"></i>
-                        <p>Components
+                    <a data-toggle="collapse" href="#content">
+                        <i class="fa fa-list"></i>
+                        <p>内容
                            <b class="caret"></b>
                         </p>
                     </a>
-                    <div class="collapse" id="componentsExamples">
+                    <div class="collapse" id="content">
                         <ul class="nav">
-                            <li><a href="components/buttons.html">Buttons</a></li>
-                            <li><a href="components/grid.html">Grid System</a></li>
-                            <li><a href="components/icons.html">Icons</a></li>
-                            <li><a href="components/notifications.html">Notifications</a></li>
-                            <li><a href="components/panels.html">Panels</a></li>
-                            <li><a href="components/sweet-alert.html">Sweet Alert</a></li>
-                            <li><a href="components/typography.html">Typography</a></li>
+                            <li>
+                                <a href="components/buttons.html">
+                                    <span class="sidebar-mini">B</span>
+                                    <span class="sidebar-normal">内容</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="components/grid.html">
+                                    <span class="sidebar-mini">GS</span>
+                                    <span class="sidebar-normal">分类</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="components/panels.html">
+                                    <span class="sidebar-mini">P</span>
+                                    <span class="sidebar-normal">标签</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="components/sweet-alert.html">
+                                    <span class="sidebar-mini">SA</span>
+                                    <span class="sidebar-normal">页面</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="components/notifications.html">
+                                    <span class="sidebar-mini">N</span>
+                                    <span class="sidebar-normal">Notifications</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="components/icons.html">
+                                    <span class="sidebar-mini">I</span>
+                                    <span class="sidebar-normal">Icons</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="components/typography.html">
+                                    <span class="sidebar-mini">T</span>
+                                    <span class="sidebar-normal">Typography</span>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </li>
-
                 <li>
                     <a data-toggle="collapse" href="#formsExamples">
                         <i class="pe-7s-note2"></i>
@@ -73,14 +127,33 @@
                     </a>
                     <div class="collapse" id="formsExamples">
                         <ul class="nav">
-                            <li><a href="forms/regular.html">Regular Forms</a></li>
-                            <li><a href="forms/extended.html">Extended Forms</a></li>
-                            <li><a href="forms/validation.html">Validation Forms</a></li>
-                            <li><a href="forms/wizard.html">Wizard</a></li>
+                            <li>
+                                <a href="forms/regular.html">
+                                    <span class="sidebar-mini">Rf</span>
+                                    <span class="sidebar-normal">Regular Forms</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="forms/extended.html">
+                                    <span class="sidebar-mini">Ef</span>
+                                    <span class="sidebar-normal">Extended Forms</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="forms/validation.html">
+                                    <span class="sidebar-mini">Vf</span>
+                                    <span class="sidebar-normal">Validation Forms</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="forms/wizard.html">
+                                    <span class="sidebar-mini">W</span>
+                                    <span class="sidebar-normal">Wizard</span>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </li>
-
                 <li>
                     <a data-toggle="collapse" href="#tablesExamples">
                         <i class="pe-7s-news-paper"></i>
@@ -90,14 +163,33 @@
                     </a>
                     <div class="collapse" id="tablesExamples">
                         <ul class="nav">
-                            <li><a href="tables/regular.html">Regular Tables</a></li>
-                            <li><a href="tables/extended.html">Extended Tables</a></li>
-                            <li><a href="tables/bootstrap-table.html">Bootstrap Table</a></li>
-							<li><a href="tables/datatables.net.html">DataTables.net</a></li>
+                            <li>
+                                <a href="tables/regular.html">
+                                    <span class="sidebar-mini">RT</span>
+                                    <span class="sidebar-normal">Regular Tables</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tables/extended.html">
+                                    <span class="sidebar-mini">ET</span>
+                                    <span class="sidebar-normal">Extended Tables</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tables/bootstrap-table.html">
+                                    <span class="sidebar-mini">BT</span>
+                                    <span class="sidebar-normal">Bootstrap Table</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tables/datatables.net.html">
+                                    <span class="sidebar-mini">DT</span>
+                                    <span class="sidebar-normal">DataTables.net</span>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </li>
-
                 <li>
                     <a data-toggle="collapse" href="#mapsExamples">
                         <i class="pe-7s-map-marker"></i>
@@ -107,13 +199,27 @@
                     </a>
                     <div class="collapse" id="mapsExamples">
                         <ul class="nav">
-                            <li><a href="maps/google.html">Google Maps</a></li>
-                            <li><a href="maps/vector.html">Vector Maps</a></li>
-                            <li><a href="maps/fullscreen.html">Full Screen Map</a></li>
+                            <li>
+                                <a href="maps/google.html">
+                                    <span class="sidebar-mini">GM</span>
+                                    <span class="sidebar-normal">Google Maps</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="maps/vector.html">
+                                    <span class="sidebar-mini">VM</span>
+                                    <span class="sidebar-normal">Vector maps</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="maps/fullscreen.html">
+                                    <span class="sidebar-mini">FSM</span>
+                                    <span class="sidebar-normal">Full Screen Map</span>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </li>
-
                 <li>
                     <a href="charts.html">
                         <i class="pe-7s-graph1"></i>
@@ -127,7 +233,6 @@
                         <p>Calendar</p>
                     </a>
                 </li>
-
                 <li>
                     <a data-toggle="collapse" href="#pagesExamples">
                         <i class="pe-7s-gift"></i>
@@ -137,14 +242,33 @@
                     </a>
                     <div class="collapse" id="pagesExamples">
                         <ul class="nav">
-                            <li><a href="pages/login.html">Login Page</a></li>
-                            <li><a href="pages/register.html">Register Page</a></li>
-                            <li><a href="pages/lock.html">Lock Screen Page</a></li>
-                            <li><a href="pages/user.html">User Page</a></li>
-                            <li><a href="#">More coming soon...</a></li>
+                            <li>
+                                <a href="pages/user.html">
+                                    <span class="sidebar-mini">UP</span>
+                                    <span class="sidebar-normal">User Page</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="pages/login.html">
+                                    <span class="sidebar-mini">LP</span>
+                                    <span class="sidebar-normal">Login Page</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="pages/register.html">
+                                    <span class="sidebar-mini">RP</span>
+                                    <span class="sidebar-normal">Register Page</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="pages/lock.html">
+                                    <span class="sidebar-mini">LSP</span>
+                                    <span class="sidebar-normal">Lock Screen Page</span>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </li>
             </ul>
-    	</div>
+        </div>
     </div>

@@ -216,7 +216,7 @@
     margin-bottom: 0;
     font-size: 1em;
 }
-.fixed-plugin .adjustments-line .switch{
+.fixed-plugin .adjustments-line .bootstrap-switch{
     float: right;
 }
 .fixed-plugin .dropdown-menu > li.adjustments-line > a{
@@ -362,7 +362,7 @@
         height: auto;
     }
 
-    .fixed-plugin .adjustments-line .switch{
+    .fixed-plugin .adjustments-line .bootstrap-switch{
         float: right;
         margin: 0 0px;
     }

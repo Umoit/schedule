@@ -30,7 +30,7 @@
             <div class="main-panel">
                 @include('admin.header')
                
-                <div class="content">
+                <div class="main-content">
                     @yield('content')
                 </div>
                 
